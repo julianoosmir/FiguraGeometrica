@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         menu();
     }
 
@@ -17,11 +17,14 @@ public class App {
                 calcularTraigulo();
                 break;
             default:
+                JOptionPane.showMessageDialog(null,"tchau");
                 break;
         }
         int denovo = apenaNumeros("tecle 0 para repetir");
         if(denovo == 0){
             menu();
+        }else {
+            JOptionPane.showMessageDialog(null,"tchau");
         }
 
     }
@@ -49,8 +52,7 @@ public class App {
             JOptionPane.showMessageDialog(null, "apenas numeros");
             return apenaNumeros(mensagem);
         } else {
-            int valor = Integer.parseInt(input);
-            return valor;
+            return Integer.parseInt(input);
         }
     }
 
